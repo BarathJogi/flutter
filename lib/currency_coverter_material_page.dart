@@ -10,7 +10,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               '0',
               style: TextStyle(
@@ -23,8 +23,17 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white,
               ),
-              decoration: InputDecoration(),
-            ),
+              decoration: InputDecoration(
+                hintText: 'Please enter the amount',
+                hintStyle: TextStyle(
+                  color: Colors.white60,
+                ),
+                prefixIcon: Icon(
+                  Icons.monetization_on_outlined,
+                ),
+                prefixIconColor: Colors.white60,
+              ),
+            )
           ],
         ),
       ),
